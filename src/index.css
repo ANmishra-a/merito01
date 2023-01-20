@@ -1,0 +1,21 @@
+:root {
+  --primary-color: #f21a2a;
+  --complementary-color: #c51320;
+  --secondary-color: #5b5a5c;
+  --tertiary-color: #747279;
+  --quaternary-color: #514c53;
+  --quinary-color: #ec545c;
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
