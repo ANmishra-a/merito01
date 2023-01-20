@@ -1,0 +1,146 @@
+p {
+  font-size: 1.9rem;
+  font-weight: 500;
+  color: black;
+}
+
+p span {
+  font-size: 1.9rem;
+  font-weight: 500;
+  color: var(--quinary-color);
+}
+.common_container {
+  width: 100%;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+}
+.common_container .second {
+  font-size: 1.9rem;
+  font-weight: 300;
+  color: var(--secondary-color);
+}
+@media (max-width: 600px) {
+  p {
+    font-size: 1.5rem; /* adjust font size for smaller screens */
+  }
+  .common_container {
+    margin-top: 3rem; /* adjust margin for smaller screens */
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-bottom: 1rem;
+  }
+  p span {
+    font-size: 1.2rem;
+  }
+  .common_container .second {
+    font-size: 1.5rem;
+    font-weight: 200;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+.product_card {
+  width: 380px;
+  position: relative;
+  box-shadow: 0 2px 7px #dfdfdf;
+  margin: 50px auto;
+  background: #fafafa;
+  transition: all 0.9s ease-in-out;
+  overflow: hidden;
+}
+
+.product_tumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  width: 100%;
+  background: #f0f0f0;
+}
+
+.product_tumb img {
+  max-width: 100%;
+  max-height: 100%;
+  transition: all 0.3s ease-in-out;
+}
+.product_card:hover .product_tumb img {
+  transform: scale(1.1);
+}
+.product_details {
+  padding: 30px;
+}
+
+.product_catagory {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: black;
+  margin-bottom: 18px;
+}
+
+.product_details:hover {
+  background-color: #fb888d;
+  transition-duration: 0.4s;
+}
+/* .product_details h4 a:hover {
+  color: #fbb72c;
+} */
+
+.product_details p {
+  font-size: 20px;
+  line-height: 22px;
+  margin-bottom: 18px;
+  color: black;
+}
+
+.product_bottom_details {
+  overflow: hidden;
+  padding-top: 20px;
+}
+
+.product_bottom_details div {
+  float: left;
+  width: 50%;
+}
+.btn_more {
+  transition-duration: 0.4s;
+
+  color: black;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.btn_more:hover {
+  color: white;
+}
+
+.btn_container {
+  font-size: 10px;
+  color: #fbb72c;
+  font-weight: 600;
+}
+/* Set flex direction to row for screen width greater than 900px */
+@media screen and (min-width: 900px) {
+  .product_container_main_cards {
+    flex-direction: row;
+  }
+}
+
+/* Set flex direction to column for screen width less than 900px */
+@media screen and (max-width: 900px) {
+  .product_container_main_cards {
+    flex-direction: column;
+  }
+}

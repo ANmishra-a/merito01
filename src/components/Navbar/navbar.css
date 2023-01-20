@@ -1,0 +1,169 @@
+.nav-container {
+  margin: 20px;
+  padding: 20px 0px 20px 0px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: transparent;
+}
+
+.links-container {
+  width: 70%;
+  display: flex;
+  justify-content: flex-end;
+}
+.links-container .link {
+  position: relative;
+  transition: color 0.5s ease-in-out;
+  margin: 1.2rem;
+  padding: 2px;
+  text-decoration: none;
+  font-size: x-large;
+  font-weight: 500;
+}
+.links-container > .link:hover {
+  color: #737307;
+}
+.links-container > .link:hover::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  bottom: -5px; /* the position of the line */
+  left: 0;
+  background-color: var(--primary-color); /* the color of the line */
+  animation: move-line 1s ease-in-out; /* animation property */
+}
+/* keyframes for the animation */
+@keyframes move-line {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: 10%; /* stop at the middle */
+  }
+  /* 100% {
+    left: 100%;
+  } */
+}
+.our-services-container {
+  position: relative;
+  font-weight: 500;
+}
+.our-services-container:hover .dropdown-container {
+  display: flex;
+  transition: visibility 0s linear 0.5s, opacity 0.5s linear;
+  visibility: visible;
+  opacity: 1;
+}
+.dropdown-container {
+  background-color: rgb(210, 208, 208);
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
+  font-weight: 500;
+  padding: 20px;
+  width: 10vw;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  z-index: 10;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin: 2px;
+  visibility: hidden;
+  opacity: 0;
+}
+.dropdown-link {
+  text-decoration: none;
+  color: #1f1e1e; /* specify a color */
+  font-weight: bold; /* make the text bold */
+}
+.dropdown-link:hover {
+  color: #636060;
+}
+@media only screen and (max-width: 600px) {
+  .links-container {
+    flex-direction: column;
+  }
+  .dropdown-link {
+    font-size: 1.5rem;
+  }
+  .dropdown-container {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: white;
+  }
+  .links-container > .link:hover::before {
+    height: 1px; /* change the height of the line */
+  }
+}
+.link {
+  text-decoration: none; /* remove underline */
+  color: inherit; /* remove blue color */
+}
+a {
+  text-decoration: none;
+}
+.search-icon {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+/* Hides the links-container when screen width is less than or equal to 900px */
+@media (max-width: 900px) {
+  .links-container {
+    display: none;
+  }
+}
+
+/* Shows the menu icon when screen width is less than or equal to 900px */
+@media (max-width: 900px) {
+  .menu-icon-container {
+    display: flex;
+  }
+}
+
+/* Hides the mobile-links-container by default */
+.mobile-links-container {
+  /* display: none; */
+}
+.mobile-links-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: absolute;
+  top: 100px;
+  right: 0;
+  background-color: #fff;
+  width: max-content;
+  padding: 20px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  z-index: 1;
+}
+
+/* Shows the mobile-links-container when navbarOpen state is true */
+.mobile-links-container.open {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background: white;
+  width: 100%;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Styles for the mobile-links */
+.mobile-link {
+  margin: 10px 0;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: black;
+}

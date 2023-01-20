@@ -1,0 +1,48 @@
+.product_container_main {
+  background-color: azure;
+  width: 100%;
+  margin: 200px 0px 200px 0px;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.product_container_main_cards {
+  display: flex;
+  width: 70%;
+  justify-content: center;
+  align-items: center;
+}
+.join {
+  font-size: 2rem;
+  font-weight: 500;
+}
+.view-course-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 4vh;
+  background-color: #d64b53;
+  color: white;
+  border-color: transparent;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.view-course-btn:hover {
+  color: rgb(13, 13, 13);
+}
+/* Reduce font size for screen width less than 900px */
+@media screen and (max-width: 900px) {
+  .join {
+    font-size: 1.5rem;
+  }
+}
+
+/* Reduce width of view-course-btn for screen width less than 900px */
+@media screen and (max-width: 900px) {
+  .view-course-btn {
+    width: 150px;
+  }
+}

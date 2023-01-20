@@ -1,0 +1,135 @@
+.product-card {
+  width: 100%;
+  display: flex;
+}
+
+.product-card__image-container {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: slide-in 0.5s ease-in-out;
+}
+
+.product-card__text-container {
+  width: 50%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  margin-left: 10rem;
+}
+
+.product-card__title {
+  margin-bottom: 1rem;
+}
+
+.product-card__button {
+  display: block;
+  margin-top: 1rem;
+}
+
+.left .product-card__image-container {
+  animation-name: slide-in-left;
+}
+
+.right .product-card__image-container {
+  animation-name: slide-in-right;
+}
+
+@keyframes slide-in-left {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+.product-card__info {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.product-card__info {
+  font-size: 1.5rem;
+  max-width: 50%;
+  word-wrap: break-word;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.product-card__button {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.product-card__button {
+  border-radius: 2rem;
+  border: none;
+  text-align: center;
+  width: max-content;
+  height: max-content;
+  background-color: var(--quinary-color);
+  padding: 20px;
+  font-size: larger;
+  margin: 10px;
+  transition: all 0.5s ease-in-out;
+}
+
+.product-card__button:hover {
+  color: white;
+  box-shadow: 4.3px 8.6px 8.6px hsl(0deg 0% 0% / 0.37);
+  background-color: #a30e19;
+  box-shadow: inset 1px 1px 0.233;
+}
+
+.product-card__button a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.5rem;
+}
+
+.product-card__button:hover a {
+  color: white;
+}
+
+/* Media Queries */
+@media screen and (max-width: 600px) {
+  .product-card__image,
+  .product-card__info {
+    width: 100%;
+  }
+  .product-card__image-container {
+    display: none;
+  }
+  .product-card__text-container,
+  .product-card__info {
+    width: 100%;
+    padding: 2px;
+    font-size: 1rem;
+    max-width: 90%;
+    word-wrap: break-word;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    padding-right: 1rem;
+  }
+  .product-card__image-container > img {
+    width: 40%;
+  }
+}
+.product-card__image-container > img {
+  width: 80%;
+}

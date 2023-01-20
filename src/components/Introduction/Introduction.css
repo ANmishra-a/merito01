@@ -1,0 +1,85 @@
+.container {
+  display: flex;
+}
+.container__left {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+.container__left-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.container__left-info:first-child h2 {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 0%;
+}
+.container__left-info span {
+  font-size: 4rem;
+  font-weight: 600;
+  color: var(--quinary-color);
+}
+.container__left-info h3 {
+  color: #636363;
+}
+.container__right {
+  width: 50%;
+  display: flex;
+
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.container__right img {
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+}
+.btn > button {
+  border-radius: 2rem;
+  border: none;
+  text-align: center;
+  width: calc(max-content + 2px);
+  height: max-content;
+  background-color: var(--quinary-color);
+  padding: 20px;
+  font-size: larger;
+  margin: 10px;
+}
+.btn > button a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.5rem;
+}
+.btn > button:hover {
+  color: white;
+  box-shadow: 4.3px 8.6px 8.6px hsl(0deg 0% 0% / 0.37);
+  background-color: #a30e19;
+  box-shadow: inset 1px 1px 0.233;
+}
+.btn > button:hover a {
+  color: white;
+}
+@media (max-width: 600px) {
+  .container {
+    flex-wrap: wrap; /* allows the child elements to wrap to the next line */
+  }
+  .container__left,
+  .container__right {
+    width: 100%; /* makes each child element take up the full width of the container */
+  }
+  .container__left-info h2 {
+    font-size: 2rem; /* adjust the font size for smaller screens */
+  }
+  .container__left-info span {
+    font-size: 2rem; /* adjust the font size for smaller screens */
+  }
+  .container__right img {
+    width: 100%;
+    height: auto; /* allows the image to maintain its aspect ratio */
+  }
+}
